@@ -1,0 +1,58 @@
+plugins {
+	id 'application'
+	id 'java'
+	id 'org.openjfx.javafxplugin' version '0.1.0'
+	id 'org.beryx.jlink' version '3.1.1'
+}
+
+group = 'com.project'
+version = '1.0'    
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+	implementation group: 'org.hsqldb', name: 'hsqldb', version: '2.7.4'
+	implementation group: 'com.zaxxer', name: 'HikariCP', version: '6.2.1'
+	implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.17'
+	implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.5.17'
+	implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.17'
+}
+
+java {
+	sourceCompatibility = '21'
+    modularity.inferModulePath = true //do automatycznego ustawiania module path, potrzebny do tego bedzie plik module-info.java
+}
+
+compileJava { 
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava{
+    options.encoding = 'UTF-8'
+}
+
+javafx {
+    version = '23.0.2'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.base', 'javafx.graphics']
+}
+
+application {
+   mainModule = 'project.jfx.client' // nazwa w pliku module-info.java
+   mainClass = 'com.project.app.ProjectClientApplication' //klasa uruchomieniowa z metodą main poprzedzona nazwą pakietu
+}	
+
+jlink {
+	javaHome = "$projectDir/../../jdk-21" // ścieżka do JDK, zmień jeśli trzeba!
+    launcher {
+        name = "$project.name" // nazwa głównego katalogu projektu, będzie również nazwą pliku EXE uruchamiającego aplikację
+    }
+}
+
+//task copyDb(type: Copy) {   // kopiowanie katalogu z bazą danych
+//    into "$buildDir/jpackage/$project.name/db"
+//    from "db"
+//}
+//jpackageImage.finalizedBy(copyDb)
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controller.ProjectController">
+   <top>
+      <VBox prefHeight="157.0" prefWidth="873.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField alignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
+                  <Button mnemonicParsing="false" text="Szukaj" />
+                  <Label text="Rozmiar strony:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Label>
+                  <ChoiceBox prefWidth="150.0" />
+                  <Button mnemonicParsing="false" text="Dodaj" />
+               </children>
+            </HBox>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="|◄ ">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" text="◄ ">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></Button>
+                     </children></HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Button mnemonicParsing="false" text="► " />
+                        <Button mnemonicParsing="false" text="►| " />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Strona 1" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView prefHeight="403.0" prefWidth="873.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="122.0" text="Id" />
+          <TableColumn prefWidth="144.0" text="Nazwa" />
+            <TableColumn prefWidth="205.0" text="Opis" />
+            <TableColumn minWidth="0.0" prefWidth="191.0" text="Data utworzenia" />
+            <TableColumn prefWidth="210.0" text="Data oddania" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
