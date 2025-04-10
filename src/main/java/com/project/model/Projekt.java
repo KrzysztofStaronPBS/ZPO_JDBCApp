@@ -4,6 +4,12 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Projekt {
+    private Integer projektId;
+    private String nazwa;
+    private String opis;
+    private LocalDateTime dataCzasUtworzenia;
+    private LocalDate dataOddania;
+    
     public Integer getProjektId() {
         return projektId;
     }
@@ -60,10 +66,4 @@ public class Projekt {
         this.dataCzasUtworzenia = dataCzasUtworzenia;
         this.dataOddania = dataOddania;
     }
-
-    private Integer projektId;
-    private String nazwa;
-    private String opis;
-    private LocalDateTime dataCzasUtworzenia;
-    private LocalDate dataOddania;
 }

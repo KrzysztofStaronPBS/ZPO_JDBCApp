@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/com.project.dao/com.project.dao.iml" filepath="$PROJECT_DIR$/com.project.dao/com.project.dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.project.datasource/com.project.datasource.iml" filepath="$PROJECT_DIR$/com.project.datasource/com.project.datasource.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.project.model/com.project.model.iml" filepath="$PROJECT_DIR$/com.project.model/com.project.model.iml" />
       <module fileurl="file://$PROJECT_DIR$/com/project/model/model.iml" filepath="$PROJECT_DIR$/com/project/model/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/com/project/project.iml" filepath="$PROJECT_DIR$/com/project/project.iml" />
     </modules>

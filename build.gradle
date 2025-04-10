@@ -50,9 +50,18 @@ jlink {
     }
 }
 
+eclipse.classpath.file {
+    whenMerged {
+        entries.findAll {
+        	it.properties.kind.equals('lib')
+        }.each {
+        	it.entryAttributes['module'] = 'true'
+         }
+    }
+}
+
 //task copyDb(type: Copy) {   // kopiowanie katalogu z bazą danych
 //    into "$buildDir/jpackage/$project.name/db"
 //    from "db"
 //}
 //jpackageImage.finalizedBy(copyDb)
-
